@@ -1,16 +1,59 @@
 .hero {
-	outline:2px solid red;
-	
+	@include clearfix;
+}
+.hero__slider {
+	background: url($content + 'hero.png') no-repeat;
+	@include cover-background;
+	background-position:center;
+	height:195px;
 }
 
-.hero__slider {
-	height:195px;
-	outline: 2px solid green;
-	width:375px;
+.hero__col {
+	height:175px;
+	float:left;
+	width:50%;
 
-	h1 {
-		font-size:24px;
+	h3 {
+		font-size: 22px;
 		text-align: center;
+		color:$white;
 	}
+}
 
+.hero__col--left {
+	background:$pink;
+}
+
+.hero__col--right {
+	background:$darkBlue;
+}
+
+.section-jobs {
+	background:$lightGrey;
+	height:270px;
+}
+
+.section-categories {
+	background:$lightBlue;
+	height:575px;
+}
+
+.section-steps {
+	background:$brightBlue;
+	height:400px;
+}
+
+.section-instructions {
+	height:630px;
+}
+
+.section-partners {
+	background:$lightGrey;
+	height:320px;
+}
+
+.section-title {
+	color:$white;
+	font-size:24px;
+	text-align:center;
 }

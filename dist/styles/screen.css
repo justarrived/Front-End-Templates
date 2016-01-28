@@ -15,7 +15,11 @@ html {
 /**
  * Remove default margin.
  */
-body {
+body,
+h1,
+h2,
+h3,
+h4 {
   margin: 0; }
 
 /* HTML5 display definitions
@@ -353,17 +357,62 @@ td,
 th {
   padding: 0; }
 
-header {
-  height: 70px;
-  background: #222531; }
+.container {
+  max-width: 800px;
+  outline: 2px;
+  margin: 0 auto;
+  width: 100%; }
 
-.hero {
-  outline: 2px solid red; }
+header {
+  background: #222531;
+  height: 70px; }
+
+.hero:after {
+  content: "";
+  display: table;
+  clear: both; }
 
 .hero__slider {
-  height: 195px;
-  outline: 2px solid green;
-  width: 375px; }
-  .hero__slider h1 {
-    font-size: 24px;
-    text-align: center; }
+  background: url("../images/content/hero.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 195px; }
+
+.hero__col {
+  height: 175px;
+  float: left;
+  width: 50%; }
+  .hero__col h3 {
+    font-size: 22px;
+    text-align: center;
+    color: #FFFFFF; }
+
+.hero__col--left {
+  background: #E5007D; }
+
+.hero__col--right {
+  background: #222531; }
+
+.section-jobs {
+  background: #E8EBEE;
+  height: 270px; }
+
+.section-categories {
+  background: #383F4E;
+  height: 575px; }
+
+.section-steps {
+  background: #0069D2;
+  height: 400px; }
+
+.section-instructions {
+  height: 630px; }
+
+.section-partners {
+  background: #E8EBEE;
+  height: 320px; }
+
+.section-title {
+  color: #FFFFFF;
+  font-size: 24px;
+  text-align: center; }

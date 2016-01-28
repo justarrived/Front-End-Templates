@@ -2,12 +2,15 @@
 
 @import 'base/normalize';
 @import 'base/global';
+@import 'base/mixins';
 
 // Import Components
  @import 'components/header';
 
 // Import Layouts
  @import 'layouts/home';
+
+  @import 'layouts/mediaqueries';
 
 // Import Plugins
 // @import 'plugins/plugin';
