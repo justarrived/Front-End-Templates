@@ -367,6 +367,14 @@ header {
   background: #222531;
   height: 70px; }
 
+.top-logo {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
 .hero:after {
   content: "";
   display: table;
@@ -379,7 +387,7 @@ header {
   height: 195px; }
 
 .hero__col {
-  height: 175px;
+  padding-bottom: 25%;
   float: left;
   width: 50%; }
   .hero__col h3 {
@@ -409,7 +417,6 @@ header {
   height: 630px; }
 
 .section-partners {
-  background: #E8EBEE;
   height: 320px; }
 
 .section-title {
