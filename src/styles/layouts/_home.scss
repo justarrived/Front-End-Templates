@@ -2,22 +2,43 @@
 	@include clearfix;
 }
 .hero__slider {
-	background: url($content + 'hero.png') no-repeat;
+	background: 
+	linear-gradient(
+      rgba(34, 37, 49, 0.5), 
+      rgba(34, 37, 49, 0.5)
+    ),
+
+	url($content + 'hero.png') no-repeat;
 	@include cover-background;
 	background-position:center;
 	height:195px;
 }
 
 .hero__col {
-	padding-bottom:25%;
+	position: relative;
 	float:left;
+	height:195px;
 	width:50%;
+	text-align: center;
+		display: flex;
 
-	h3 {
+	h3, h4 {
 		font-size: 22px;
 		text-align: center;
 		color:$white;
 	}
+
+	h3 {
+		padding-bottom:20px;
+	}
+
+	h4 {
+		font-size:18px;
+	}
+}
+
+.hero__col__content {
+	margin:auto;
 }
 
 .hero__col--left {
@@ -31,16 +52,96 @@
 .section-jobs {
 	background:$lightGrey;
 	height:270px;
+	h3 {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.section-jobs__content {
+	width:80%;
+	margin:0 auto;
+	outline: 2px solid green;
+
+	a {
+		color:#383F4E;
+		font-size: 14px;
+		text-transform: uppercase;
+		text-decoration: none;
+		display: inline-block;
+		vertical-align: middle
+	}
+
+}
+
+.section-jobs__content-right {
+	outline: 2px solid orange;
+	display: inline-block;
+	float:right;
+
+	img {
+		display: inline-block;
+		vertical-align:middle;
+	}
 }
 
 .section-categories {
 	background:$lightBlue;
+	text-align: center;
 	height:575px;
+	h2 {
+		display: inline-block;
+		vertical-align: middle;
+		color:$white;
+	}
+	p {
+		color:$white;
+		padding:0 10%;
+	}
+
 }
 
 .section-steps {
 	background:$brightBlue;
 	height:400px;
+	position: relative;
+
+	img, p {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	p {
+		color:$white;
+		max-width:230px;
+		text-align: center;
+		padding-left:15%;
+		outline: 2px solid pink;
+	}
+
+	img {
+		max-width:50px;
+		width:100%;
+	}
+
+	div {
+		
+		&:last-child {
+			padding-bottom:0;
+		}
+	}
+}
+
+.section-steps__content {
+	width:80%;
+	margin:auto;
+	outline: 2px solid black;
+	@include vertical-align;
+}
+
+.section-steps__element {
+	width:100%;
+	outline: 2px solid red;
 }
 
 .section-instructions {
@@ -49,10 +150,34 @@
 
 .section-partners {
 	height:320px;
+	text-align:center;
+	position: relative;
+}
+
+.section-partners::before {
+    content:"";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(232, 235, 238, .77);
 }
 
 .section-title {
-	color:$white;
 	font-size:24px;
 	text-align:center;
+	margin:auto;
+	text-align: center;
+}
+.section-title--white {
+	color:$white;
+}
+
+.section-icon {
+	display: inline-block;
+	vertical-align:middle;
+	padding-right:10px;
+	outline: 2px solid red;
 }
