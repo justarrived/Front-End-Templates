@@ -1,8 +1,3 @@
-var button = document.getElementById("button");
-
-button.onclick = function() {
-	alert("Hej");
-}
 ;(function(factory) {
     if(typeof define === 'function' && define.amd) {
         define(['jquery'], factory);
@@ -291,10 +286,3 @@ button.onclick = function() {
         });
     };
 }));
-
-$(document).ready(function(){
-			
-
-
-
-});

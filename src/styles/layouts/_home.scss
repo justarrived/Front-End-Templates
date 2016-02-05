@@ -14,6 +14,7 @@
 	height:195px;
 }
 
+
 .hero__col {
 	position: relative;
 	float:left;
@@ -26,13 +27,17 @@
 		font-size: 22px;
 		text-align: center;
 		color:$white;
+		margin-right: auto;
+		margin-left: auto;
 	}
 
 	h3 {
+		width: 60%;
 		padding-bottom:20px;
 	}
 
 	h4 {
+		width: 70%;
 		font-size:18px;
 	}
 }
@@ -60,8 +65,8 @@
 
 .section-jobs__content {
 	width:80%;
-	margin:0 auto;
-	outline: 2px solid green;
+	margin:0 auto;padding-top: 20px;
+
 
 	a {
 		color:#383F4E;
@@ -75,7 +80,6 @@
 }
 
 .section-jobs__content-right {
-	outline: 2px solid orange;
 	display: inline-block;
 	float:right;
 
@@ -90,16 +94,30 @@
 	text-align: center;
 	height:575px;
 	h2 {
+		margin-top: 43px;
 		display: inline-block;
 		vertical-align: middle;
 		color:$white;
 	}
 	p {
+		margin-top: 43px;
 		color:$white;
-		padding:0 10%;
+		padding:0 5%;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	p.second{
+		margin-top: 0px;
+	}
+
+	.section-icon {
+		margin-top: 43px;
 	}
 
 	select {
+		margin-top:-20px;
 		-webkit-appearance:none;
 	    -moz-appearance:none;
 	    appearance:none;
@@ -107,9 +125,7 @@
 	    width:270px;
 	    padding: 20px 10px;
 	    border-radius:40px;
-	    outline: none;
-	    background: url($ui + 'arrow-down.png') no-repeat right $white;
-
+	    background: url($ui + 'arrow-down.png') no-repeat 90% 55% $white;
 	}
 
 }
@@ -124,17 +140,24 @@
 		vertical-align: middle;
 	}
 
+	h2 {
+		
+		padding-top: 0px;
+		margin-bottom: 30px;
+	}
 	p {
 		color:$white;
 		max-width:230px;
-		text-align: center;
-		padding-left:15%;
-		outline: 2px solid pink;
+		text-align: left;
+		padding-left:5%;
+		
 	}
 
 	img {
 		max-width:50px;
 		width:100%;
+	
+		margin-right: 20px;
 	}
 
 	div {
@@ -148,14 +171,13 @@
 .section-steps__content {
 	width:80%;
 	margin:auto;
-	outline: 2px solid black;
 	@include vertical-align;
 	text-align: center;
 }
 
 .section-steps__element {
 	width:100%;
-	outline: 2px solid red;
+	
 }
 
 .section-instructions {
@@ -166,6 +188,37 @@
 	height:320px;
 	text-align:center;
 	position: relative;
+
+	h3 {
+		padding-top: 30px;
+		font-size: 22px;
+	}
+
+	p {
+		width: 35%;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 17px;
+		margin-bottom: 40px;
+	}
+
+	.group {
+		
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+
+
+		img {
+			margin-bottom: 3%;
+			vertical-align: middle;
+			margin-left: 5%;
+			margin-right: 5%;
+			width: 30%;
+
+		}
+	}
+
 }
 
 .section-partners::before {
@@ -180,6 +233,7 @@
 }
 
 .section-title {
+
 	font-size:24px;
 	text-align:center;
 	margin:auto;
@@ -191,6 +245,7 @@
 }
 
 .section-icon {
+
 	display: inline-block;
 	vertical-align:middle;
 	padding-right:10px;

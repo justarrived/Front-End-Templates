@@ -1,5 +1,6 @@
-var button = document.getElementById("button");
+$(document).ready(function(){
+			
 
-button.onclick = function() {
-	alert("ko");
-}
+
+
+});

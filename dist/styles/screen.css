@@ -404,10 +404,14 @@ header {
   .hero__col h3, .hero__col h4 {
     font-size: 22px;
     text-align: center;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    margin-right: auto;
+    margin-left: auto; }
   .hero__col h3 {
+    width: 60%;
     padding-bottom: 20px; }
   .hero__col h4 {
+    width: 70%;
     font-size: 18px; }
 
 .hero__col__content {
@@ -429,7 +433,7 @@ header {
 .section-jobs__content {
   width: 80%;
   margin: 0 auto;
-  outline: 2px solid green; }
+  padding-top: 20px; }
   .section-jobs__content a {
     color: #383F4E;
     font-size: 14px;
@@ -439,7 +443,6 @@ header {
     vertical-align: middle; }
 
 .section-jobs__content-right {
-  outline: 2px solid orange;
   display: inline-block;
   float: right; }
   .section-jobs__content-right img {
@@ -451,13 +454,23 @@ header {
   text-align: center;
   height: 575px; }
   .section-categories h2 {
+    margin-top: 43px;
     display: inline-block;
     vertical-align: middle;
     color: #FFFFFF; }
   .section-categories p {
+    margin-top: 43px;
     color: #FFFFFF;
-    padding: 0 10%; }
+    padding: 0 5%;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto; }
+  .section-categories p.second {
+    margin-top: 0px; }
+  .section-categories .section-icon {
+    margin-top: 43px; }
   .section-categories select {
+    margin-top: -20px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -465,8 +478,7 @@ header {
     width: 270px;
     padding: 20px 10px;
     border-radius: 40px;
-    outline: none;
-    background: url("../images/ui/arrow-down.png") no-repeat right #FFFFFF; }
+    background: url("../images/ui/arrow-down.png") no-repeat 90% 55% #FFFFFF; }
 
 .section-steps {
   background: #0069D2;
@@ -475,22 +487,24 @@ header {
   .section-steps img, .section-steps p {
     display: inline-block;
     vertical-align: middle; }
+  .section-steps h2 {
+    padding-top: 0px;
+    margin-bottom: 30px; }
   .section-steps p {
     color: #FFFFFF;
     max-width: 230px;
-    text-align: center;
-    padding-left: 15%;
-    outline: 2px solid pink; }
+    text-align: left;
+    padding-left: 5%; }
   .section-steps img {
     max-width: 50px;
-    width: 100%; }
+    width: 100%;
+    margin-right: 20px; }
   .section-steps div:last-child {
     padding-bottom: 0; }
 
 .section-steps__content {
   width: 80%;
   margin: auto;
-  outline: 2px solid black;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -498,8 +512,7 @@ header {
   text-align: center; }
 
 .section-steps__element {
-  width: 100%;
-  outline: 2px solid red; }
+  width: 100%; }
 
 .section-instructions {
   height: 630px; }
@@ -508,6 +521,25 @@ header {
   height: 320px;
   text-align: center;
   position: relative; }
+  .section-partners h3 {
+    padding-top: 30px;
+    font-size: 22px; }
+  .section-partners p {
+    width: 35%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+    margin-bottom: 40px; }
+  .section-partners .group {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto; }
+    .section-partners .group img {
+      margin-bottom: 3%;
+      vertical-align: middle;
+      margin-left: 5%;
+      margin-right: 5%;
+      width: 30%; }
 
 .section-partners::before {
   content: "";
@@ -537,4 +569,16 @@ header {
 
 @media only screen and (min-width: 640px) {
   .hero__slider {
-    height: 400px; } }
+    height: 400px; }
+  .hero__col h3, .hero__col h4 {
+    font-size: 22px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-right: auto;
+    margin-left: auto; }
+  .hero__col h3 {
+    width: 90%;
+    padding-bottom: 20px; }
+  .hero__col h4 {
+    width: 90%;
+    font-size: 18px; } }
