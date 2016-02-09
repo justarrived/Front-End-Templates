@@ -243,7 +243,9 @@
 		}
 	}
 }
-
+ul {
+	margin-left: -20px;
+}
 .section-steps__content {
 	width:80%;
 	margin:auto;
@@ -256,116 +258,153 @@
 	
 }
 
+
 .section-instructions {
 	height:630px;
 
-	/*** Overall MovingBoxes Slider ***/
+
 .mb-wrapper {
-	border: 5px solid #ccc;
-	margin: 0 auto 20px;
+	max-width: 375px;
+	height: 470px;
 	position: relative;
-	left: 0;
-	top: 0;
-	border-radius: 10px;
-	box-shadow: inset 0 0 10px #888;
+	width: 100%;
+	margin-bottom:0px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-	/* Dimensions set via css in MovingBoxes version 2.2.2+ */
-		#slider { width: 375px; }
-		#slider li { width: 250px; }
 
-
-/* Moving Boxes title image wrapper */
-#title { 
-  text-align: center; 
+li {
+	-moz-box-shadow: 3px 3px 5px 6px #ccc;
+  	-webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  	box-shadow: 3px 3px 5px 6px #ccc;
+	border-radius: 4px 4px 4px 4px;
 }
-#title img { 
-  border: 0; 
+
+li.middle {
+	margin-right: 20px!important;
+	margin-left: 20px!important;
+}
+
+
+/* Panel images */
+.bg-wrap-active{ 
+	width:100%!important;
+	height: 300px!important;
+	margin: 0;
+	padding: 0;
+	background-color: $pink;
+
 }
 
 /* Panel images */
-.mb-inside img { width: 100%; }
-
-/* height of the placeholder until image completely loads - needed for
-   webkit browsers, add this only if you don't want the height animation
-   on startup. 326px measures the height of the current image when enlarged 
-*/
-#slider-two .current img { /* height: 326px; */ }
-
-/* Panel links */
-.mb-inside a { color: #333; text-decoration: none; border-bottom: 1px dotted #ccc; }
-.mb-inside a:hover { border-bottom: 1px solid #999; }
-
-/* Add/remove panels buttons */
-.buttons { padding: 5px 10px; text-align: center; }
-
-/* Direct link styling */
-.dlinks { 
-  text-align: center;
-  margin: 0 0 20px 0;
+.bg-wrap{ 
+	width:100%!important;
+	height: 300px!important;
+	margin: 0;
+	padding: 0;
+	background-color: $darkBlue;
 }
-.dlinks * {
-  vertical-align: middle;
+
+.instructions {
+	height: 135px;
+	background-color: $white;
+	text-align: center;
+	overflow: hidden;
 }
+
+.instructions-scale {
+	height: 80px;
+	background-color: $white;
+}
+
+.mb-slider_2 .mb-panel.current {
+	cursor: auto;
+	height: 435px!important;
+	width: 280px;
+
+	.instructions-scale {
+		height: 135px!important;
+	}
+
+		li.first, li.last {
+		margin-top: 0px!important;
+	}
+
+}
+
+h2 {
+	font-size: 21px;
+	margin-top: 20px;
+}
+
+p{
+	font-size: 14px;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+
 
 /* Panel Wrapper */
-.mb-slider, .mb-scroll {
+.mb-slider_2, .mb-scroll {
 	width: 100%;
-	height: 100%;
+	height: 500px!important;
 	overflow: hidden;
-	margin: 0 auto;
 	padding: 0;
 	position: relative;
 	left: 0;
 	top: 0;
-
-	/***(>'-')> Control Panel Font size here <('-'<)***/
-	font-size: 18px;
 }
 
+
 /* active slider border highlight */
-.mb-active-slider {
-	border-color: #333;
+.mb-active-slider_2 {
+	border:none;
+	height: 440px!important;
 }
 
 /*** Slider panel ***/
-.mb-slider .mb-panel {
+.mb-slider_2 .mb-panel {
 	margin: 0;
-	padding: 20px;
-	display: block;
+	padding: 0px;
+	display: inline-block;
 	cursor: pointer;
+	vertical-align: middle;
 	float: left;
-	list-style: none;
+	width: 280px;
+	list-style: none;	
 }
 
 /* Cursor to arrow over current panel, pointer for all others,
 change .current class name using plugin option, currentPanel : 'current' */
-.mb-slider .mb-panel.current {
-	cursor: auto;
-}
+
 
 /*** Inside the panel ***/
 .mb-inside {
-	padding: 10px;
-	border: 1px solid #999;
+	padding: 0px;
+	width: 280px;
+
 }
 
 .mb-inside * {
 	max-width: 100%;
 }
 
-
-
 /*** Controls added below the panels ***/
 .mb-controls {
-	margin: 0 auto;
+	margin-top: -20px!important;
+	margin: 0 0;
 	text-align: center;
-	background: #ccc;
 	position: relative;
 	z-index: 100;
 }
 .mb-controls a {
-	color: #666;
+
+	color: rgba(29, 29, 38, 0.5);
 	font: 18px/2.2 Georgia, Serif;
 	display: inline-block;
 	text-decoration: none;
@@ -374,17 +413,10 @@ change .current class name using plugin option, currentPanel : 'current' */
 	text-align: center;
 	outline: 0;
 }
-.mb-controls a:hover {
-	color: black;
-}
 .mb-controls a.current {
-	color: white;
-}
-.mb-active-slider .mb-controls {
-	background: #333;
+	color: $purple;
 }
 
-	
 }
 
 .section-partners {

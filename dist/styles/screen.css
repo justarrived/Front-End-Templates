@@ -551,6 +551,9 @@ header {
   .section-steps div:last-child {
     padding-bottom: 0; }
 
+ul {
+  margin-left: -20px; }
+
 .section-steps__content {
   width: 80%;
   margin: auto;
@@ -565,17 +568,8 @@ header {
 
 .section-instructions {
   height: 630px;
-  /*** Overall MovingBoxes Slider ***/
-  /* Dimensions set via css in MovingBoxes version 2.2.2+ */
-  /* Moving Boxes title image wrapper */
   /* Panel images */
-  /* height of the placeholder until image completely loads - needed for
-   webkit browsers, add this only if you don't want the height animation
-   on startup. 326px measures the height of the current image when enlarged 
-*/
-  /* Panel links */
-  /* Add/remove panels buttons */
-  /* Direct link styling */
+  /* Panel images */
   /* Panel Wrapper */
   /* active slider border highlight */
   /*** Slider panel ***/
@@ -584,74 +578,88 @@ change .current class name using plugin option, currentPanel : 'current' */
   /*** Inside the panel ***/
   /*** Controls added below the panels ***/ }
   .section-instructions .mb-wrapper {
-    border: 5px solid #ccc;
-    margin: 0 auto 20px;
+    max-width: 375px;
+    height: 470px;
     position: relative;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-    box-shadow: inset 0 0 10px #888; }
-  .section-instructions #slider {
-    width: 375px; }
-  .section-instructions #slider li {
-    width: 250px; }
-  .section-instructions #title {
-    text-align: center; }
-  .section-instructions #title img {
-    border: 0; }
-  .section-instructions .mb-inside img {
-    width: 100%; }
-  .section-instructions #slider-two .current img {
-    /* height: 326px; */ }
-  .section-instructions .mb-inside a {
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px dotted #ccc; }
-  .section-instructions .mb-inside a:hover {
-    border-bottom: 1px solid #999; }
-  .section-instructions .buttons {
-    padding: 5px 10px;
-    text-align: center; }
-  .section-instructions .dlinks {
-    text-align: center;
-    margin: 0 0 20px 0; }
-  .section-instructions .dlinks * {
-    vertical-align: middle; }
-  .section-instructions .mb-slider, .section-instructions .mb-scroll {
     width: 100%;
-    height: 100%;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto; }
+  .section-instructions li {
+    box-shadow: 3px 3px 5px 6px #ccc;
+    border-radius: 4px 4px 4px 4px; }
+  .section-instructions li.middle {
+    margin-right: 20px !important;
+    margin-left: 20px !important; }
+  .section-instructions .bg-wrap-active {
+    width: 100% !important;
+    height: 300px !important;
+    margin: 0;
+    padding: 0;
+    background-color: #E5007D; }
+  .section-instructions .bg-wrap {
+    width: 100% !important;
+    height: 300px !important;
+    margin: 0;
+    padding: 0;
+    background-color: #222531; }
+  .section-instructions .instructions {
+    height: 135px;
+    background-color: #FFFFFF;
+    text-align: center;
+    overflow: hidden; }
+  .section-instructions .instructions-scale {
+    height: 80px;
+    background-color: #FFFFFF; }
+  .section-instructions .mb-slider_2 .mb-panel.current {
+    cursor: auto;
+    height: 435px !important;
+    width: 280px; }
+    .section-instructions .mb-slider_2 .mb-panel.current .instructions-scale {
+      height: 135px !important; }
+    .section-instructions .mb-slider_2 .mb-panel.current li.first, .section-instructions .mb-slider_2 .mb-panel.current li.last {
+      margin-top: 0px !important; }
+  .section-instructions h2 {
+    font-size: 21px;
+    margin-top: 20px; }
+  .section-instructions p {
+    font-size: 14px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto; }
+  .section-instructions .mb-slider_2, .section-instructions .mb-scroll {
+    width: 100%;
+    height: 500px !important;
     overflow: hidden;
-    margin: 0 auto;
     padding: 0;
     position: relative;
     left: 0;
-    top: 0;
-    /***(>'-')> Control Panel Font size here <('-'<)***/
-    font-size: 18px; }
-  .section-instructions .mb-active-slider {
-    border-color: #333; }
-  .section-instructions .mb-slider .mb-panel {
+    top: 0; }
+  .section-instructions .mb-active-slider_2 {
+    border: none;
+    height: 440px !important; }
+  .section-instructions .mb-slider_2 .mb-panel {
     margin: 0;
-    padding: 20px;
-    display: block;
+    padding: 0px;
+    display: inline-block;
     cursor: pointer;
+    vertical-align: middle;
     float: left;
+    width: 280px;
     list-style: none; }
-  .section-instructions .mb-slider .mb-panel.current {
-    cursor: auto; }
   .section-instructions .mb-inside {
-    padding: 10px;
-    border: 1px solid #999; }
+    padding: 0px;
+    width: 280px; }
   .section-instructions .mb-inside * {
     max-width: 100%; }
   .section-instructions .mb-controls {
-    margin: 0 auto;
+    margin-top: -20px !important;
+    margin: 0 0;
     text-align: center;
-    background: #ccc;
     position: relative;
     z-index: 100; }
   .section-instructions .mb-controls a {
-    color: #666;
+    color: rgba(29, 29, 38, 0.5);
     font: 18px/2.2 Georgia, Serif;
     display: inline-block;
     text-decoration: none;
@@ -659,12 +667,8 @@ change .current class name using plugin option, currentPanel : 'current' */
     margin: 0 5px 0 0;
     text-align: center;
     outline: 0; }
-  .section-instructions .mb-controls a:hover {
-    color: black; }
   .section-instructions .mb-controls a.current {
-    color: white; }
-  .section-instructions .mb-active-slider .mb-controls {
-    background: #333; }
+    color: #6563A4; }
 
 .section-partners {
   height: 320px;

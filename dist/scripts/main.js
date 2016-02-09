@@ -13,7 +13,7 @@
 		var o, base = this;
 
 		// Access to jQuery and DOM versions of element
-		base.$el = $(el).addClass('mb-slider');
+		base.$el = $(el).addClass('mb-slider_2');
 		base.el = el;
 
 		// Add a reverse reference to the DOM object
@@ -32,8 +32,8 @@
 				.append('<a class="mb-scrollButtons mb-right"></a><div class="mb-left-shadow"></div><div class="mb-right-shadow"></div>');
 
 			base.$panels = base.$el.children().addClass('mb-panel');
-			base.runTime = $('.mb-slider').index(base.$el) + 1; // Get index (run time) of this slider on the page
-			base.regex = new RegExp('slider' + base.runTime + '=(\\d+)', 'i'); // hash tag regex
+			base.runTime = $('.mb-slider_2').index(base.$el) + 1; // Get index (run time) of this slider on the page
+			base.regex = new RegExp('slider_2' + base.runTime + '=(\\d+)', 'i'); // hash tag regex
 
 			base.initialized = false;
 			base.currentlyMoving = false;
@@ -67,7 +67,7 @@
 
 			// Activate moving box on click or when an internal link obtains focus
 			base.$wrap.click(function(){
-				if (!base.$wrap.hasClass('mb-active-slider')) {
+				if (!base.$wrap.hasClass('mb-active-slider_2')) {
 					base.active();
 				}
 			});
@@ -86,12 +86,12 @@
 				if (e.target.tagName.match('TEXTAREA|INPUT|SELECT')) { return; }
 				switch (e.which) {
 					case 39: case 32: // right arrow & space
-						if (base.$wrap.is('.mb-active-slider')){
+						if (base.$wrap.is('.mb-active-slider_2')){
 							base.goForward();
 						}
 						break;
 					case 37: // left arrow
-						if (base.$wrap.is('.mb-active-slider')){
+						if (base.$wrap.is('.mb-active-slider_2')){
 							base.goBack();
 						}
 						break;
@@ -170,7 +170,7 @@
 
 		base.setSizes = function(flag){
 			// include padding & margins around the panels
-			base.padding = parseInt(base.$panels.css('padding-left'), 10) + parseInt(base.$panels.css('margin-left'), 10);
+			base.padding = parseInt(base.$panels.css('padding-left'), 5) + parseInt(base.$panels.css('margin-left'), 5);
 
 			// save 'cur' numbers (current larger panel size), use stored sizes if they exist
 			base.curWidth = (o.panelWidth) ? (o.panelWidth <=2 ? o.panelWidth * base.width : o.panelWidth) : base.pWidth;
@@ -314,7 +314,7 @@
 
 			if (base.initialized && flag) {
 				// make this moving box active
-				if (!base.$wrap.hasClass('mb-active-slider')) { base.active(); }
+				if (!base.$wrap.hasClass('mb-active-slider_2')) { base.active(); }
 				// initChange event - has extra parameter with targeted panel (not cleaned)
 				base.$el.trigger( 'initChange.movingBoxes', [ base, curPanel ] );
 			}
@@ -415,7 +415,7 @@
 				// #quote2&panel1-3&panel3-3
 				h = h.substring(0, (i >= 0 ? i : h.length));
 				// ensure the element is in the same slider
-				n = ($(h).length && $(h).closest('.mb-slider')[0] === base.el) ? $(h).closest('.mb-panel').index() + base.adj : null;
+				n = ($(h).length && $(h).closest('.mb-slider_2')[0] === base.el) ? $(h).closest('.mb-panel').index() + base.adj : null;
 			} else if (n !== null) {
 				// #&panel1-3&panel3-3
 				n = (o.hashTags) ? parseInt(n[1],10) : null;
@@ -425,7 +425,7 @@
 
 		// set hash tags
 		base.setHash = function(n){
-			var s = 'slider' + base.runTime + "=",
+			var s = 'slider_2' + base.runTime + "=",
 				h = window.location.hash;
 			if ( typeof h !== 'undefined' ) {
 				window.location.hash = (h.indexOf(s) > 0) ? h.replace(base.regex, s + n) : h + "&" + s + n;
@@ -434,8 +434,8 @@
 
 		// Make moving box active (for keyboard navigation)
 		base.active = function(){
-			$('.mb-active-slider').removeClass('mb-active-slider');
-			base.$wrap.addClass('mb-active-slider');
+			$('.mb-active-slider_2').removeClass('mb-active-slider_2');
+			base.$wrap.addClass('mb-active-slider_2');
 		};
 
 		// get: var currentPanel = $('.slider').data('movingBoxes').currentPanel();  // returns # of currently selected/enlarged panel
@@ -487,9 +487,9 @@
 
 	$.movingBoxes.defaultOptions = {
 		// Appearance
-		startPanel   : 1,         // start with this panel
+		startPanel   : 2,         // start with this panel
 		reducedSize  : 0.8,       // non-current panel size: 80% of panel size
-		fixedHeight  : false,     // if true, slider height set to max panel height; if false, slider height will auto adjust.
+		fixedHeight  : true,     // if true, slider height set to max panel height; if false, slider height will auto adjust.
 
 		// Behaviour
 		initAnimation: true,      // if true, movingBoxes will initialize, then animate into the starting slide (if not the first slide)
@@ -674,8 +674,8 @@ $(document).ready(function(){
 });		
 
 	$(function(){
-		$('#slider').movingBoxes({
-			startPanel   : 1,      // start with this panel
+		$('#slider_2').movingBoxes({
+			startPanel   : 2,      // start with this panel
 			wrap         : false,  // if true, the panel will infinitely loop
 			buildNav     : true,   // if true, navigation links will be added
 			navFormatter : function(){ return "&#9679;"; } // function which returns the navigation text for each panel
