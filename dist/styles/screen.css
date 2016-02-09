@@ -528,6 +528,60 @@ header {
     padding: 20px 10px;
     border-radius: 40px;
     background: url("../images/ui/arrow-down.png") no-repeat 90% 55% #FFFFFF; }
+  .section-categories .hex {
+    outline: 3px solid red;
+    width: 100%;
+    max-width: 405px;
+    overflow: hidden;
+    height: 235px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto; }
+    .section-categories .hex .hex2 {
+      outline: 2px solid red;
+      text-align: center;
+      position: relative;
+      float: left;
+      min-width: 275px;
+      margin-left: -45px;
+      margin-top: -20px;
+      overflow: hidden;
+      width: 110%; }
+    .section-categories .hex .hex1 {
+      text-align: center;
+      width: 100%;
+      margin-right: auto;
+      margin-left: auto;
+      display: block; }
+  .section-categories .hexagon {
+    margin-right: 4px !important;
+    float: left;
+    position: relative;
+    width: 90px;
+    height: 51.96px;
+    background-color: #FFF;
+    margin: 25.98px 0;
+    border-left: solid 1px #222531;
+    border-right: solid 1px #222531; }
+  .section-categories .hexagon:before,
+  .section-categories .hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 63.64px;
+    height: 63.64px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 12.1802px; }
+  .section-categories .hexagon:before {
+    top: -31.8198px;
+    border-top: solid 1.4142px #222531;
+    border-right: solid 1.4142px #222531; }
+  .section-categories .hexagon:after {
+    bottom: -31.8198px;
+    border-bottom: solid 1.4142px #222531;
+    border-left: solid 1.4142px #222531; }
 
 .section-steps {
   background: #0069D2;
